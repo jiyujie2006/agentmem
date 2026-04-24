@@ -4,7 +4,7 @@ set -e
 # AgentMem One-Line Installer
 # Usage: curl -sSL https://install.agentmem.dev | sh
 
-REPO="yourusername/agentmem"
+REPO="jiyujie2006/agentmem"
 BINARY="agentmem"
 INSTALL_DIR="${INSTALL_DIR:-$HOME/.local/bin}"
 

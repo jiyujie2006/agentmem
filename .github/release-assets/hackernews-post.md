@@ -17,7 +17,7 @@ I was tired of repeating myself to Claude every morning. "We use single quotes."
 ## Demo
 
 ```bash
-curl -sSL https://install.agentmem.dev | sh
+curl -sSL https://github.com/jiyujie2006/agentmem/releases/latest/download/install.sh | sh
 agentmem extract ~/.claude/
 agentmem inject
 ```
@@ -43,6 +43,6 @@ Output:
 
 Rust + SQLite + FTS5. Single 5MB binary. No Docker, no config files, no API keys.
 
-**GitHub**: https://github.com/yourusername/agentmem
+**GitHub**: https://github.com/jiyujie2006/agentmem
 
 Would love feedback from anyone else hitting this "groundhog day" context problem.

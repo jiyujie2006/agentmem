@@ -147,15 +147,15 @@ impl SqliteStore {
             "INSERT OR IGNORE INTO memories
              (id, agent_type, timestamp, context_type, content, confidence, source_file, project_path, tags)
              VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9)",
-            [
+            rusqlite::params![
                 &memory.id,
                 &memory.agent_type.to_string(),
                 &memory.timestamp.to_rfc3339(),
                 &memory.context_type.to_string(),
                 &memory.content,
-                &memory.confidence.to_string(),
+                &memory.confidence,
                 &memory.source_file.to_string_lossy().to_string(),
-                &memory.project_path.as_ref().map(|p| p.to_string_lossy().to_string()).unwrap_or_default(),
+                &memory.project_path.as_ref().map(|p| p.to_string_lossy().to_string()),
                 &serde_json::to_string(&memory.tags)?,
             ],
         )?;
@@ -322,11 +322,11 @@ impl SqliteStore {
         Ok(rows)
     }
 
-    /// 删除指定 ID
+    /// 删除指定 ID（支持前缀匹配）
     pub fn delete(&self, id: &str) -> Result<bool> {
         let affected = self.conn.execute(
-            "DELETE FROM memories WHERE id = ?1",
-            [id],
+            "DELETE FROM memories WHERE id LIKE ?1",
+            [format!("{}%", id)],
         )?;
         Ok(affected > 0)
     }
@@ -386,7 +386,7 @@ impl SqliteStore {
             content: row.get(4)?,
             confidence: row.get(5)?,
             source_file: PathBuf::from(row.get::<_, String>(6)?),
-            project_path: row.get::<_, Option<String>>(7)?.map(PathBuf::from),
+            project_path: row.get::<_, Option<String>>(7)?.filter(|s: &String| !s.is_empty()).map(PathBuf::from),
             tags,
         })
     }

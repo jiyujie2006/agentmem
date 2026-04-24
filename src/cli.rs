@@ -88,7 +88,7 @@ pub enum Commands {
     /// 启动 WebUI 仪表盘
     Webui {
         /// 监听端口
-        #[arg(short, long, default_value = "8080")]
+        #[arg(short = 'P', long, default_value = "8080")]
         port: u16,
     },
 

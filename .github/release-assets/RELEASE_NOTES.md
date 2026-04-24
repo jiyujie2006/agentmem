@@ -17,7 +17,7 @@ AgentMem v1.0 is the first stable release of the cross-agent persistent memory l
 ### Installation
 
 ```bash
-curl -sSL https://install.agentmem.dev | sh
+curl -sSL https://github.com/jiyujie2006/agentmem/releases/latest/download/install.sh | sh
 ```
 
 ### Quick Start
@@ -46,4 +46,4 @@ agentmem webui --port 8080
 
 ---
 
-**Full Changelog**: https://github.com/yourusername/agentmem/compare/v0.1.0...v1.0.0
+**Full Changelog**: https://github.com/jiyujie2006/agentmem/compare/v0.1.0...v1.0.0

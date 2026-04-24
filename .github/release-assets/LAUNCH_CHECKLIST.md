@@ -37,7 +37,7 @@ Post in this exact order (within 15 minutes):
 1. [ ] **Hacker News**: Submit "Show HN" post
    - URL: https://news.ycombinator.com/submit
    - Title: "Show HN: I made AI coding agents remember across sessions"
-   - Link: https://github.com/yourusername/agentmem
+   - Link: https://github.com/jiyujie2006/agentmem
 
 2. [ ] **Reddit r/programming**: Submit post
    - Title: "I built a 5MB tool that makes AI coding agents remember across sessions"

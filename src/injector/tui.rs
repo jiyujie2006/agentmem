@@ -101,7 +101,7 @@ pub fn print_memory_list(memories: &[MemoryUnit]) {
 pub fn print_welcome() {
     println!();
     println!("{}", "  ╔═══════════════════════════════════════════════════════════════╗".bright_blue());
-    println!("  {} {:<61} {}", "║".bright_blue(), "AgentMem v0.1.0".bold().white(), "║".bright_blue());
+    println!("  {} {:<61} {}", "║".bright_blue(), format!("AgentMem v{}", env!("CARGO_PKG_VERSION")).bold().white(), "║".bright_blue());
     println!("  {} {:<61} {}", "║".bright_blue(), "Your AI coding agents, with persistent memory".white(), "║".bright_blue());
     println!("{}", "  ╚═══════════════════════════════════════════════════════════════╝".bright_blue());
     println!();

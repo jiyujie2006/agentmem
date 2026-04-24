@@ -2,7 +2,7 @@
 
 > **Install a 5MB binary. Your AI never forgets again.**
 >
-> [![GitHub stars](https://img.shields.io/github/stars/yourusername/agentmem?style=social)](https://github.com/yourusername/agentmem)
+> [![GitHub stars](https://img.shields.io/github/stars/jiyujie2006/agentmem?style=social)](https://github.com/jiyujie2006/agentmem)
 > ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 > ![Rust](https://img.shields.io/badge/rust-1.70%2B-orange.svg)
 > ![SQLite](https://img.shields.io/badge/storage-SQLite-blue.svg)
@@ -29,7 +29,7 @@ You waste 5–20 minutes re-establishing context. Every. Single. Session.
 
 ```bash
 # 1. Install
-curl -sSL https://install.agentmem.dev | sh
+curl -sSL https://github.com/jiyujie2006/agentmem/releases/latest/download/install.sh | sh
 
 # 2. Extract your existing conversations
 agentmem extract ~/.claude/
@@ -80,13 +80,13 @@ agentmem webui --port 8080
 ### macOS / Linux (one line)
 
 ```bash
-curl -sSL https://install.agentmem.dev | sh
+curl -sSL https://github.com/jiyujie2006/agentmem/releases/latest/download/install.sh | sh
 ```
 
 ### From Source
 
 ```bash
-git clone https://github.com/yourusername/agentmem.git
+git clone https://github.com/jiyujie2006/agentmem.git
 cd agentmem
 cargo build --release
 # Binary: target/release/agentmem

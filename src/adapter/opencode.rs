@@ -174,7 +174,7 @@ impl AgentAdapter for OpenCodeAdapter {
             for cap in fact_re.captures_iter(&msg.content) {
                 let fact = format!("{} = {}", &cap[1], &cap[2]);
                 let mut memory = MemoryUnit::new(
-                    AgentType::Unknown,
+                    AgentType::OpenCode,
                     ContextType::Fact,
                     fact,
                     self.log_dir.clone(),

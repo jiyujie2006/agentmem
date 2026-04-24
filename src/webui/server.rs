@@ -79,6 +79,8 @@ pub async fn run_webui(store: SqliteStore, port: u16) -> Result<()> {
                 };
 
                 let _ = socket.write_all(response.as_bytes()).await;
+                let _ = socket.flush().await;
+                let _ = socket.shutdown().await;
             }
         });
     }

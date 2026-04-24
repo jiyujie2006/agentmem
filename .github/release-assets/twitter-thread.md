@@ -35,7 +35,7 @@ Zero cloud. Zero external deps. 5MB binary.
 **Tweet 4 (Demo)**:
 One-line install:
 ```
-curl -sSL https://install.agentmem.dev | sh
+curl -sSL https://github.com/jiyujie2006/agentmem/releases/latest/download/install.sh | sh
 ```
 
 Extract memories:
@@ -78,6 +78,6 @@ Built this because I needed it every single day.
 
 If you use Claude Code, Cursor, or OpenCode, try it:
 
-https://github.com/yourusername/agentmem
+https://github.com/jiyujie2006/agentmem
 
 Star ⭐ if it saves you 10 minutes tomorrow morning.

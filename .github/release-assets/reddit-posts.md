@@ -17,12 +17,12 @@ So I built AgentMem — a tiny local daemon that:
 It works across Claude Code, Cursor, and OpenCode. Zero external dependencies, zero cloud, 5MB single binary.
 
 ```bash
-curl -sSL https://install.agentmem.dev | sh
+curl -sSL https://github.com/jiyujie2006/agentmem/releases/latest/download/install.sh | sh
 agentmem extract ~/.claude/
 agentmem inject
 ```
 
-GitHub: https://github.com/yourusername/agentmem
+GitHub: https://github.com/jiyujie2006/agentmem
 
 Curious if others feel this pain or if it's just me being lazy.
 
@@ -43,7 +43,7 @@ Tired of Claude forgetting everything when you start a new session? I built a ti
 
 5MB binary, one-line install.
 
-https://github.com/yourusername/agentmem
+https://github.com/jiyujie2006/agentmem
 
 ---
 
@@ -59,4 +59,4 @@ Works by reading `~/.cursor/` logs, extracting preferences with regex rules, sto
 
 Also has a built-in WebUI dashboard to visualize your memory distribution.
 
-https://github.com/yourusername/agentmem
+https://github.com/jiyujie2006/agentmem
