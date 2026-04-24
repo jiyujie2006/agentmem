@@ -1,0 +1,31 @@
+[package]
+name = "agentmem"
+version = "1.0.0"
+edition = "2021"
+authors = ["AgentMem Contributors"]
+description = "A lightweight local daemon that makes AI coding agents remember across sessions"
+license = "MIT"
+repository = "https://github.com/yourusername/agentmem"
+keywords = ["ai", "agent", "memory", "cursor", "claude"]
+categories = ["command-line-utilities", "development-tools"]
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+clap = { version = "4", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+notify = "6"
+colored = "2"
+chrono = { version = "0.4", features = ["serde"] }
+regex = "1"
+anyhow = "1"
+dirs = "5"
+uuid = { version = "1", features = ["v4", "serde"] }
+toml = "0.8"
+walkdir = "2"
+rusqlite = { version = "0.32", features = ["bundled", "chrono", "uuid"] }
+
+[profile.release]
+opt-level = 3
+lto = true
+strip = true
